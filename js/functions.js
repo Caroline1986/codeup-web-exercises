@@ -8,12 +8,12 @@
      * Example
      * > sayHello("codeup") // returns "Hello, codeup!"
      */
+
     var name = "Codeup"
 
     function sayHello(name) {
         return ("Hello, " + name + ".");
     }
-
     console.log("Hello, " + name + ".");
 
     /**
@@ -65,11 +65,9 @@
      * number)
      */
 
-    function isTwo(random) {
-        if (random === 2) ;
-        return true;
+    function isTwo(x) {
+        return x === 2;
     }
-
     console.log(isTwo(random))
 
     /**
@@ -86,17 +84,30 @@
     function calculateTip(a,b) {
         var tipConversion = parseInt(a)/100;
         return tipConversion *b;
-}
+    }
+    console.log(calculateTip(30, 15))
+
+//function calculateTip(tipPercentage, billAmount) {
+//     var amountToTip = tipPercentage * billAmount;
+//     return amountToTip;
+// }
     /**
      * TODO:
      * Use prompt and alert in combination with your calculateTip function to
      * prompt the user for the bill total and a percentage they would like to tip,
      * then display the dollar amount they should tip
      */
-    var totalBill = prompt("What is your total bill?")
-    var tipPercent = prompt("What percentage would you like to tip?")
-    alert("You're tip amount is: " + (calculateTip(totalBill, tipPercent)) + ".");
+    var totalBill = (parseFloat(prompt("What is your total bill?")));
+    var tipPercent = (parseFloat(prompt("What percentage would you like to tip?")));
+    alert("You're tip amount is: " + (calculateTip(totalBill.toFixed(2), tipPercent.toFixed(2))) + ".");
 
+    // function calculateTipWithUser() {
+    //     var tipPercentage = prompt("Please enter the tip percentage ( a number between 0 and 1)");
+    //     var billAmount = prompt("Please enter the total bill");
+    //     var tipAmount = calculateTip(parseFloat(tipPercentage), parseFloat(billAmount));
+    //     alert("You should tip: $" + tipAmount.toFixed(2));
+    // }
+    // calculateTipWithUser();
     /**
      * TODO:
      * Create a function named `applyDiscount`. This function should accept a price
@@ -116,4 +127,12 @@
         return (originalPrice-(originalPrice * discountPercent));
     }
     console.log(applyDiscount(20,.1))
+
+// function applyDiscount(originalPrice, discountPercentage) {
+//     var discountAmount = originalPrice * discountPercentage;
+//     var finalPrice = originalPrice = discountAmount;
+//     return finalPrice;
+// }
+//
+// console.log('applyDiscount(45.99, 0.12)', applyDiscount(45.99, 0.12));
 //})
