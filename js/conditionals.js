@@ -20,33 +20,22 @@
  * console.logging the function's return value
  */
 
-// var colors = ['blue', 'red', 'cyan', 'pink'];
-// var color = colors[Math.floor(Math.random()*colors.length)];
-// function analyzeColor(color) {
-//     console.log(color);
-//     if (color === 'blue') {
-//         return ("Blue is great!");
-//     } else if (color === 'red') {
-//         return ("Red is almost pink.");
-//     } else if (color === 'cyan') {
-//         return ("Cyan is between the wavelengths of green and blue.");
-//     } else {
-//         return ("What color is that?");
-//     }
-// }
-// console.log(analyzeColor(color))
+var colors = ['blue', 'red', 'cyan', 'pink'];
+var color = colors[Math.floor(Math.random()*colors.length)];
+function analyzeColor(color) {
+	console.log(color);
+	if (color === 'blue') {
+		return ("Blue is great!");
+	} else if (color === 'red') {
+		return ("Red is almost pink.");
+	} else if (color === 'cyan') {
+		return ("Cyan is between the wavelengths of green and blue.");
+	} else {
+		return ("What color is that?");
+	}
+}
+ console.log(analyzeColor(color))
 
-// var x = ['blue', 'red', 'cyan'];
-//     function analyzeColor(color) {
-//     if (x === 'blue') {
-//         return ("Blue is great!");
-//     } else if (x === 'red') {
-//         return ("Red is almost pink.");
-//     } else if (x === 'cyan') {
-//         return ("Cyan is between the wavelengths of green and blue.");
-//     }
-// }
-// console.log(analyzeColor(x))
 
 
 
@@ -55,48 +44,47 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+ var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
-/**
- * TODO:
- * Pass the `randomColor` variable to your function and console.log the results.
- * You should see a different message every time you refresh the page
- */
-// function analyzeColor(colors) {
-//     console.log(randomColor);
-//     if (randomColor === 'blue') {
-//         return ("Blue is great!");
-//     } else if (randomColor === 'red') {
-//         return ("Red is almost pink.");
-//     } else if (randomColor === 'cyan') {
-//         return ("Cyan is between the wavelengths of green and blue.");
-//     } else {
-//         return ("What color is that?");
-//     }
-// }
-// console.log(analyzeColor(randomColor))
+// /**
+//  * TODO:
+//  * Pass the `randomColor` variable to your function and console.log the results.
+//  * You should see a different message every time you refresh the page
+//  */
+ function analyzeColor(colors) {
+ 	console.log(randomColor);
+ 	if (randomColor === 'blue') {
+ 		return ("Blue is great!");
+ 	} else if (randomColor === 'red') {
+ 		return ("Red is almost pink.");
+ 	} else if (randomColor === 'cyan') {
+ 		return ("Cyan is between the wavelengths of green and blue.");
+	} else {
+ 		return ("What color is that?");
+ 	}
+ }
+ console.log(analyzeColor(randomColor))
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
 
 function analyzeColor(colorName) {
-    var colorName = prompt("What is your favorite color?")
-    switch (colorName) {
-        case 'blue':
-            alert("Blue is great!");
-            break;
-        case 'red':
-            alert("Red is almost pink.");
-            break;
-        case 'cyan':
-            alert("Cyan is between the wavelengths of green and blue.");
-            break;
-        default:
-            alert("What color is that?");
-            break;
+	switch (colorName) {
+		case 'blue':
+			return("Blue is great!");
+			break;
+		case 'red':
+		   return ("Red is almost pink.");
+			break;
+		case 'cyan':
+			return ("Cyan is between the wavelengths of green and blue.");
+			break;
+		default:
+			return ("What color is that?");
+			break;
 
-    }
+	}
 }
 analyzeColor(randomColor)
 /**
@@ -105,6 +93,8 @@ analyzeColor(randomColor)
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+var anyColor = prompt("Name a color. Any color.")
+alert(analyzeColor(anyColor));
 
 /* ########################################################################## */
 
@@ -127,6 +117,30 @@ analyzeColor(randomColor)
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+var discount;
+function calculateTotal (luckyNumber, totalAmount) {
+
+    if (luckyNumber === 0) {
+        return (discount = 100);
+    } else if (luckyNumber === 1) {
+        return (discount = 10);
+    } else if (luckyNumber === 2) {
+        return (discount = 25);
+    } else if (luckyNumber === 3) {
+        return (discount = 35);
+    } else if (luckyNumber === 4) {
+        return (discount = 50);
+    } else {
+        return (0);
+
+        var discountTotal = (totalAmount * discount/100);
+        return (totalAmount - discountTotal);
+    }
+}
+    console.log(calculateTotal(0, 100))
+
+
+
 
 /**
  * TODO:
@@ -136,7 +150,13 @@ analyzeColor(randomColor)
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ var luckyNumber = Math.floor(Math.random() * 6);
+var billTotal = prompt("What is the total of your bill?");
+alert("Your luck number is: " + luckyNumber + " .");
+alert("The total bill before discount is " + billTotal + " .");
+var afterDiscount = (calculateTotal());
+prompt("You're total after discount is " + afterDiscount + " .")
+
 
 /**
  * TODO:
@@ -154,3 +174,22 @@ analyzeColor(randomColor)
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+
+var confirmed = confirm("Would you like to enter a number?");
+    if (confirmed === false) {
+        alert ("Too bad, then...");
+    } else if (confirmed) {
+        var evenOrOdd = Number(prompt("Enter a number."))
+        var plusHundred = (evenOrOdd+ 100)
+    } if (evenOrOdd % 2 == 0) {
+        alert("Your number is even.");
+    } else {
+        alert("Your number is odd.");
+    } if (evenOrOdd > 0) {
+        alert("Your number is positive.");
+    } else {
+        alert("Your number is negative.")
+    } alert("Your number plus 100 is " + plusHundred + " .")
+
