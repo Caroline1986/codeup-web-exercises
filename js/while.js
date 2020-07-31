@@ -37,7 +37,8 @@ do {
     var cones = Math.floor(Math.random() * 5) + 1;
     allCones = allCones - cones;
     console.log("I sold " + cones + " cones.");
-    if (cones > allCones) {
+    if (cones > allCones){
+    // if(cones <= allCones)
         console.log("I can not sell you you " + cones + " cones. I only have " + allCones + " cones...");
     }
 
