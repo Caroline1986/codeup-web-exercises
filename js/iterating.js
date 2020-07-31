@@ -52,7 +52,10 @@ names.forEach(function (name) {
 
 for (var i = 0; i > names.length; i++) {
 }
-    console.log("The first name in the array is " + names[0] + ".")
+    console.log(names.length)
+    console.log("The first name in the array is " + names[0] + ".");
+    console.log("The second name in the array is " + names[1] + ".");
+    console.log("The last name in the array is " + names[3] + ".");
 
 
 })();
