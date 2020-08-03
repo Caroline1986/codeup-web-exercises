@@ -120,14 +120,15 @@ console.log(secondToLast(fruits.length -2))
 // Exercise 2. Write a function named rest() that takes an an array and returns an array containing everything
 // except the first element.
 var fruits = ['apple', 'banana', 'orange', 'apple', 'pineapple'];
-function rest() {
-    var newArr = (fruits.shift());
-    return
+function rest(arr) {
+    var newArr = (arr.shift());
+    return newArr
 
 }
 
+console.log(rest(fruits))
 console.log(fruits.shift())
-console.log(fruits)
+console.log('after shift', fruits)
 
 // Exercise 3. Write a function named getLongestString that takes in an array of strings and returns the longest
 // string of that array
