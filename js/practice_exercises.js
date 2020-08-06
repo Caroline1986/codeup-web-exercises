@@ -226,3 +226,28 @@ console.log(getIndexesOf("a", "banana"))
 // }
 //
 // console.log(getIndexesOf("n", "banana"))
+
+// Exercise 9. Write a function named removeAll.
+// It should accept an array and a value
+// removeAll should return an array with all of the original contents EXCEPT for the provided value
+// iterate across the input array
+// output array
+// Example: removeAll([1, 2, 3], 2) should return [1, 3]
+function removeAll(array, value) {
+    var newArr = [];
+    for (var i = 0; )
+
+}
+
+// Example 2: removeAll([2, 2, 3, 4, 5, 2, 2], 2) should return [3, 4, 5]
+// Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array of the first
+// ten fibonacci numbers
+// Exercise 11. Write a function named getNFibonacci(n) that returns an array containing the first n
+// fibonacci numbers
+// Exercise 12. Write a function named moveFirstToLast() that takes in an array
+// the function should return the array with the first element at the end
+// Example: moveFirstToLast([1, 2, 3, 4]) should return [2, 3, 4, 1]
+// Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements
+// Zip returns a new array of arrays where each element is an array of the two elements at the same index
+// Example: zip([1, 2, 3], [4, 5, 6]) returns [[1, 4], [2, 5], [3, 6])
+// Example: zip([“a”, “b”, “c”], [“x”, “y”, “z”]) returns [[“a”, “x”], [“b”, “y”], [“c”,

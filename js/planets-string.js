@@ -30,7 +30,17 @@
 //console.log(planetsArray.join(" <br> ");
     document.write(stringPlanets);
 
-var newString = planetsArray.join("</li> <li> ");
-var listString = "<ul>" + newString + "</ul>"
+var newString = planetsArray.join("</li> <li>");
+var listString = "<ul>" + "<li>" +newString + "</li>" + "</ul>"
     console.log(listString)
+    document.write(listString)
+
+//    ex1
+//planetsList = "<ul><li>"+planetsArray.join("</li><li>")+"</li></ul
+
+    // ex2
+//    var planetsUL = "<ul>";
+    // planetsArray.forEach(function(planet) {
+    //     planetsUL =+ "<li>" + planet + "</li>;"
+    // })
 })();
