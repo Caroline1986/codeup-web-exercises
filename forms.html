@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Register With Us</title>
 </head>
 <body>
-<form method="POST" action="https://request-inspector.glitch.me/">
+<br method="POST" action="https://request-inspector.glitch.me/">
     <div>
-        <p>Please, enter your email address.</p>
-    <input type="text" name="email" placeholder="email address">
-        <p>Please, enter your password.</p>
-    <input type="password" name="password" placeholder="password">
+
+        <label for="email"> <h4><u>Please, enter your email address.</u></h4></label>
+        <input type="text" name="email" id="email" placeholder="email address">
+        <br>
+        <label for="password"> <h4><u>Please, enter your password.</u></h4></label>
+    <input type="password" name="password" id="password" placeholder="password">
     </div>
     <div>
-        <p>Enter a short bio.</p>
-        <height<textarea name="Bio" placeholder="Describe yourself"></textarea>
+        <br>
+        <h3><u>Enter a short bio.</u></h3>
+        <textarea name="Bio" placeholder="Describe yourself" cols="75" rows="15"></textarea>
     </div>
     <br>
+    <h4><u>How did you hear about us?</u></h4>
+
         <label for="billboard">Billboard</label>
         <input type="checkbox" id="billboard" value="Billboard" name="Billboard"><br>
         <label for="radio-advertisement">Radio Advertisement</label>
@@ -27,17 +32,19 @@
         <input type="checkbox" id="other" value="Other" name="other">
     </br>
     <br>
-    <h4>What type of web browser do you use most often?</h4>
+    <h4><u>What type of web browser do you use most often?</u></h4>
     <select name="Web Browser">
         <option value="Google Chrome">Google Chrome</option>
         <option value="explorer">Internet Explorer</option>
         <option value="fox">FireFox</option>
         <option value="safari">Safari</option>
     </select>
-<br/>
+    <br/>
     <br>
+    <br>
+    <footer>
     <button type="submit">Submit form</button>
-
+    </footer>
 </form>
 </body>
 </html>
