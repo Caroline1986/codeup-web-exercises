@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Register With Us</title>
@@ -16,8 +16,8 @@
     </div>
     <div>
         <br>
-        <h3><u>Enter a short bio.</u></h3>
-        <textarea name="Bio" placeholder="Describe yourself" cols="75" rows="15"></textarea>
+        <label for="bio" ><h3><u>Enter a short bio.</u></h3></label>
+        <textarea name="Bio" id="bio" placeholder="Describe yourself" cols="75" rows="15" style="background-color:#99FFFF;"></textarea>
     </div>
     <br>
     <h4><u>How did you hear about us?</u></h4>
@@ -32,8 +32,8 @@
         <input type="checkbox" id="other" value="Other" name="other">
     </br>
     <br>
-    <h4><u>What type of web browser do you use most often?</u></h4>
-    <select name="Web Browser">
+<label for="browser"></label> <u>What type of web browser do you use most often?</u></label>
+    <select id = "browser" name="Web Browser">
         <option value="Google Chrome">Google Chrome</option>
         <option value="explorer">Internet Explorer</option>
         <option value="fox">FireFox</option>
