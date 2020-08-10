@@ -233,11 +233,22 @@ console.log(getIndexesOf("a", "banana"))
 // iterate across the input array
 // output array
 // Example: removeAll([1, 2, 3], 2) should return [1, 3]
+
+var numbers = [1, 2, 3];
 function removeAll(array, value) {
+
     var newArr = [];
-    for (var i = 0; )
+    for (var i = 0; i < array.length; i++){
+        if (array[i] !== value){
+            newArr.splice(value)
+            return (newArr);
+
+        }
+        console.log(newArr);
+    }
 
 }
+
 
 // Example 2: removeAll([2, 2, 3, 4, 5, 2, 2], 2) should return [3, 4, 5]
 // Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array of the first
