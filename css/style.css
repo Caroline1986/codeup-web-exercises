@@ -32,12 +32,16 @@ ol {
     list-style-type: armenian;
 }
 
-td, tr, table {
+table {
+    border: 1px darkblue solid;
+}
+
+td, tr, th {
     padding: 7px 20px 10px;
     font-size: x-large;
     margin:50px auto;
     width: 500px;
-
+    border: 1px darkblue solid;
 
 }
 
