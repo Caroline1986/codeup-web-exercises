@@ -6,8 +6,8 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 :root {
-    --info-bg-color: #c4d2f3;
-    --info-text-color:#3232ac;
+    --info-bg-color: #c6d6f6;
+    --info-text-color: #5653a5;
     --success-bg:  #d2efdc;
     --success-text:  #318652;
     --warning-bg: #FCFAC9;
@@ -18,10 +18,11 @@ body, html {
 
 
 .message {
+    width: 90%;
     border:darkgrey solid 1px;
-    border-radius: 7px;
-    margin: 5px;
-    padding: 8px;
+    border-radius: 6px;
+    margin: 10px auto;
+    padding: 10px;
     font-size: 12px;
     text-shadow: inherit;
 
