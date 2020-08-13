@@ -56,6 +56,7 @@ a {
     width: 100%;
     z-index: 1000;
 }
+
 .nav {
     list-style-type: none;
     padding: 0;
@@ -88,24 +89,24 @@ a {
     float: right;
 }
 
+.profile-entry {
+    margin: .5em;
+}
+
 .profile {
     background: var(--light-bg);
     height: 80px;
+}
+
+.profile-items {
+    list-style-type: none;
+    padding: 0;
 }
 
 .profile-details {
     margin: 0.5em;
     width: calc(25% - 1em);
     float: left;
-}
-
-.profile-items {
-    list-style-type: none;
-   padding: 0;
-}
-
-.profile-entry {
-    margin: .5em;
 }
 
 .timeline {
@@ -120,7 +121,6 @@ a {
     float: right;
 }
 
-
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
@@ -129,6 +129,7 @@ a {
     padding: 8px;
     border-radius: 5px;
 }
+
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
