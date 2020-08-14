@@ -38,6 +38,7 @@ h2, h3 {
     flex-direction:column;
     /*align-content: center;*/
     justify-content: space-evenly;
+
 }
 
 section {
@@ -53,6 +54,7 @@ section:nth-of-type(1) {
     background: lightgreen;
     /* enter needed declarations here */
     align-items: center;
+    /*justify-content: space-between;*/
 }
 section:nth-of-type(1) div:last-child {
     /* enter needed declarations here */
