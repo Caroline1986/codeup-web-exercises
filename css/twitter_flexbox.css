@@ -27,28 +27,41 @@ a {
 }
 
 .media {
-    width: 100%;
+    /*width: 100%;*/
     background-color: var(--light-bg);
     border-bottom: 1px solid;
     border-bottom-color: #DDD;
-    padding: .5em;
-    overflow: auto;
-    /*display: flex;*/
+    /*padding: .5em;*/
+    /*overflow: auto;*/
+    display: flex;
+    /*align-items: center;*/
+    /*flex-direction:column;*/
+    align-items: center;
+    flex-wrap: nowrap;
+
 }
 
 .media-image {
     max-width: 50px;
-    float: left;
-    margin-top: 1.33em;
+    border-bottom: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .media-body {
-    float: left;
-    width: calc(100% - 50px);
+    display: flex;
+    width: 100%;
+    align-content: flex-end;
+    flex-direction: column;
+    justify-items: flex-start;
+
 }
 
 .container {
-   margin-top: 2em;
+    margin-top: 2em;
+    display: flex;
+    /*align-items:stretch;*/
 }
 
 .top-nav {
@@ -56,17 +69,25 @@ a {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    /*display: flex;*/
+    /*justify-items: flex-start;*/
+    /*flex-basis: border-box;*/
 }
+
 
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: flex-start;
 }
 
 .nav-item {
-    display: inline-block;
+    /*display: inline-block;*/
     padding: 1.5em;
+   /* display: flex;*/
+   /*align-content: center;*/
 }
 
 .nav-link {
@@ -87,7 +108,9 @@ a {
 
 .profile-form {
     line-height: 80px;
-    float: right;
+    /*float: right;*/
+    display: flex;
+    justify-content: flex-end;
 }
 
 .profile-entry {
@@ -97,6 +120,9 @@ a {
 .profile {
     background: var(--light-bg);
     height: 80px;
+    display: flex;
+    align-content: space-evenly;
+    /*justify-items: space-between;*/
 }
 
 .profile-items {
@@ -113,13 +139,18 @@ a {
 .timeline {
     margin: 0 .5em;
     width: calc(50% - 1em);
-    float: left;
+    /*float: left;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .who-to-follow {
-    margin: 0 .5em;
-    width: calc(25% - 1em);
-    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
 }
 
 .btn {
@@ -129,11 +160,16 @@ a {
     font-weight: bold;
     padding: 8px;
     border-radius: 5px;
+
+
 }
 
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+    /*display: flex;*/
+    /*!*justify-content: flex-start;*!*/
+    /*align-content: flex-end;*/
 }
 
 .img-circle {
