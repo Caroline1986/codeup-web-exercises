@@ -1,0 +1,40 @@
+
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbotron-fluid {
+
+}
+
+.container-fluid {
+
+}
+
+.container {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+
+}
+
+/*h1 {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    width: 100%;*/
+
+/*}*/
+
+.display-4{
+    text-align: center;
+    background-color:#c2c2c2;
+    width: 100vw;
+    opacity: .70;
+
+}
