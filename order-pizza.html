@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
 </head>
 <body>
@@ -63,10 +62,11 @@
 
 
         <div class="card">
-                <div class="card-header"; style="background-color: #007BFE ; color: white">
+                <div class="card-header" style="background-color: #007BFE ; color: white">
                     Choose size and crust
                 </div>
         </div>
+
             <div class="card-body">
                 <div class="card">
                     <div class="card-header">
@@ -75,7 +75,7 @@
                     <div class="card-body">
                         Garlic seasoned crust with a rich, buttery taste.
                     </div>
-<!--                    <div class="container">-->
+
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <input class="form-check-input" type="radio" name="exampleRadios"  id="exampleRadios1" value="option1" checked>
@@ -86,12 +86,14 @@
                                 <label class="form-check-label" for="exampleRadios1">Medium (12")</label>
                             </li>
                         </ul>
+
                     </div>
                     <br>
                         <div class="card">
                             <div class="card-header">
                                 Crispy Thin
                             </div>
+                            <div class="card-body">
                                 Thin enough for optimum crispy to crunchy ratio.
                             </div>
                             <ul class="list-group">
@@ -104,14 +106,19 @@
                                     <label class="form-check-label" for="exampleRadios1">Large (14")</label>
                                 </li>
                             </ul>
-                <div class="card-footer d-flex btn-group" role="group">
-                    <a href="#" class="btn btn-primary ">< Previous Step</a>
-                    <a href="#" class="btn btn-primary mr-auto">Next Step ></a>
-                </div>
                         </div>
+                </div>
+
+                <div class="card-footer">
+                    <p class="text-right"><a href="#" class="btn btn-primary active" role="button" aria-pressed="true">Next ></a></p>
+                </div>
+                      </div>
+
                 <br>
+
+            </div>
                 <div class="card">
-                    <div class="card-header"; style="background-color: #007BFE ; color: white">
+                    <div class="card-header" style="background-color: #007BFE ; color: white">
                         Choose Cheese and Sauce
                     </div>
                 </div>
@@ -123,11 +130,16 @@
                         <div class="card-body">
                             How Much?
                         </div>
+
                         <select class="form-control">
-                            <option>Default select</option>
+                            <li><option>Light</option></li>
+                            <option>Normal</option>
+                            <option>Extra</option>
+                            <option>Double</option>
                         </select>
                     </div>
                     <br>
+
                     <div class="card">
                         <div class="card-header">
                             Sauce
@@ -136,93 +148,111 @@
                             What Type?
                         </div>
                         <select class="form-control">
-                            <option>Default select</option>
+                            <option>Tomato Sauce</option>
+                            <option>Marinara Sauce</option>
+                            <option>BBQ Sauce</option>
+                            <option>Alfredo Sauce</option>
                         </select>
                         <div class="card-body">
                             How Much?
                         </div>
                         <select class="form-control">
-                            <option>Default select</option>
+                            <option>Light</option>
+                            <option>Normal</option>
+                            <option>Extra</option>
                         </select>
-                        <div class="card-footer d-flex btn-group" role="group">
-                            <a href="#" class="btn btn-primary ">< Previous Step</a></p>
-                            <a href="#" class="btn btn-primary mr-auto">Next Step ></a></p>
-                        </div>
                     </div>
                 </div>
-            </div>
+                    <div>
+                        <div class="card-footer">
+                            <p class="text-right"><a href="#" class="btn btn-primary active push-right" role="button" aria-pressed="true">< Previous Step</a>
+                            <a href="#" class="btn btn-primary active push-right" role="button" aria-pressed="true">Next Step ></a></p>
+                        </div>
+                    </div>
+             <br>
 
-<!--<div class="tab-content">-->
-<!--    <div class="tab-pane fade show active" id="size-and-crust" role="tabpanel"-->
-<!--         aria-labelledby="size-and-crust-tab">-->
-<!--        <div class="card">-->
-<!--            <div class="card-header"; style="background-color: #007BFE ; color: white">-->
-<!--                Choose size and crust-->
-<!--            </div>-->
-<!--            <div class="card-body">-->
-<!--                <div class="card">-->
-<!--                    <div class="card-header">-->
-<!--                        Hand Tossed-->
-<!--                    </div>-->
-<!--                    <div class="card-body">-->
-<!--                        Garlic seasoned crust with a rich, buttery taste.-->
-<!--                    </div>-->
-<!--                    <div class="container">-->
-<!--                        <div class="form-check">-->
-<!--                            <input class="form-check-input" type="radio" name="exampleRadios"-->
-<!--                                   id="exampleRadios1" value="option1" checked>-->
-<!--                            <label class="form-check-label" for="exampleRadios1">-->
-<!--                                Small (10")-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="container">-->
-<!--                        <div class="form-check">-->
-<!--                            <input class="form-check-input" type="radio" name="exampleRadios"-->
-<!--                                   id="exampleRadios2" value="option2">-->
-<!--                            <label class="form-check-label" for="exampleRadios2">-->
-<!--                                Medium (12")-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            &lt;!&ndash;                </div>&ndash;&gt;-->
-<!--            <div class="card-body">-->
-<!--                <div class="card">-->
-<!--                    <div class="card-header">-->
-<!--                        Crispy Thin-->
-<!--                    </div>-->
-<!--                    <div class="card-body">-->
-<!--                        Thin enough for optimum crispy to crunchy ratio.-->
-<!--                    </div>-->
-<!--                    <div class="container" ; style="padding: .25em; border-bottom: .02em solid lightgray">-->
-<!--                        <div class="form-check">-->
-<!--                            <input class="form-check-input" type="radio" name="exampleRadios"-->
-<!--                                   id="exampleRadios3"-->
-<!--                                   value="option1" checked>-->
-<!--                            <label class="form-check-label" for="exampleRadios1">-->
-<!--                                Medium (12")-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="container" ; style="padding: .25em">-->
-<!--                        <div class="form-check">-->
-<!--                            <input class="form-check-input" type="radio" name="exampleRadios"-->
-<!--                                   id="exampleRadios4"-->
-<!--                                   value="option2">-->
-<!--                            <label class="form-check-label" for="exampleRadios2">-->
-<!--                                Large (14")-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="card-footer text-muted d-flex">-->
-<!--                        <a href="#" class="btn btn-primary ">Previous Step ></a>-->
-<!--                        <a href="#" class="btn btn-primary mr-auto">Next Step ></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</body>-->
+
+<div class="card">
+    <div class="card-header" style="background-color: #007BFE ; color: white">
+        Choose Toppings
+    </div>
+    <div class="card-body">
+            <div class="card card-header">
+               Choose Meats
+            </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">
+                                Beef
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">
+                                Ham
+                            </label>
+                        </div></li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">
+                                Philly Steak
+                            </label>
+                        </div>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">
+                                Bacon
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+        <br>
+            <div class="card card-header">
+                    Choose Non-Meats
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                    <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Green Peppers
+                        </label>
+                    </div>
+                    </li>
+                        <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+                        <label class="form-check-label" for="defaultCheck">
+                            Mushrooms
+                        </label>
+                    </div></li>
+                    <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Onions
+                        </label>
+                    </div>
+                    <li class="list-group-item">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Jalapeno Peppers
+                        </label>
+                    </div>
+                </li>
+                </ul>
+    </div>
+                    <div class="card-footer">
+                        <p class="text-right"><a href="#" class="btn btn-primary active" role="button" aria-pressed="true">Checkout<i class="fas fa-shopping-cart"></i></a></p></div>
+                </div>
+
+
+</body>
 </html>
