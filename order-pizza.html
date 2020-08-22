@@ -101,14 +101,14 @@
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <div class="custom-control custom-radio">
-                                        <input class="form-check-input" type="radio" name="exampleRadios"  id="med12" value="option1">
-                                        <label class="form-check-label" for="med12">Medium (12")</label>
+                                        <input type="radio" id="customRadio" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio">Medium (12")</label>
                                     </div>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-radio">
-                                        <input class="form-check-input" type="radio" name="exampleRadios1" id="large14" value="option2">
-                                        <label class="form-check-label" for="large14">Large (14")</label>
+                                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio3">Large (14")</label>
                                     </div>
                                 </li>
                             </ul>
@@ -220,9 +220,13 @@
                     </div>
                 </div>
                     <div>
-                        <div class="card-footer">
-                            <p class="text-right"><a href="#" class="btn btn-primary active push-right " role="button" aria-pressed="true">< Previous Step</a>
-                            <a href="#" class="btn btn-primary active push-right" role="button" aria-pressed="true">Next Step ></a></p>
+                        <div class="card-footer text-right">
+                            <div class="btn-group" role="button" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary active">< Previous Step</button>
+                                <button type="button" class="btn btn-primary active">Next Step ></button>
+<!--                            <p class="text-right"><a href="#" class="btn btn-primary active push-right " role="button" aria-pressed="true">< Previous Step</a>-->
+<!--                            <a href="#" class="btn btn-primary active push-right" role="button" aria-pressed="true">Next Step ></a></p>-->
+                            </div>
                         </div>
                     </div>
              <br>
