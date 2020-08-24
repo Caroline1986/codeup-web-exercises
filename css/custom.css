@@ -2,11 +2,11 @@
 .jumbotron {
     background-image: url("../img/pizza.png");
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
     background-size: cover;
-    background-position: center;
+    /*background-position: center;*/
 
 }
 
