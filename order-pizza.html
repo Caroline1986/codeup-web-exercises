@@ -11,6 +11,8 @@
 
 </head>
 <body>
+
+
 <nav class="navbar navbar-expand-lg bg-light">
     <a class="navbar-brand" style="color: #b9b9b9" href="#">Pizza World</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -41,31 +43,48 @@
         </div>
     </div>
 </nav>
+
+<!--jumbotron-->
     <div class="d-none d-lg-block">
         <div class="jumbotron jumbotron-fluid">
             <h1 class="display-4">Welcome to Pizza World!</h1>
         </div>
     </div>
+<!--end jumbotron-->
+<!--    <div class="container">-->
+
+
 <h2>Build your own pizza!</h2>
-<ul class="nav nav-tabs">
+<!--<ul class="nav nav-tabs" id="product-table" role="tablist">-->
+<!--    <li class="nav-item">-->
+<!--        <a href="#1" id="size" data-toggle="tab" class="nav-link active" ><span class="badge badge-secondary">1 </span> Size and crust</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--        <a href="#2" class="nav-link"><span class="badge badge-secondary">2 </span> Cheese and Sauce</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--        <a href="#3" class="nav-link"><span class="badge badge-secondary">3 </span> Toppings</a>-->
+<!--    </li>-->
+<!--</ul>-->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active"><span class="badge badge-secondary">1 </span> Size and crust</a>
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#size" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-secondary rounded-pill">1 </span> Size and crust</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link"><span class="badge badge-secondary">2 </span> Cheese and Sauce</a>
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="profile" aria-selected="false"><span class="badge badge-secondary rounded-pill">2 </span> Cheese and Sauce</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link"><span class="badge badge-secondary">3 </span> Toppings</a>
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="contact" aria-selected="false"><span class="badge badge-secondary rounded-pill">3 </span> Toppings</a>
     </li>
 </ul>
 
+<!--        <div class="card">-->
 
-
-        <div class="card">
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="home-tab">
                 <div class="card-header" style="background-color: #007BFE ; color: white">
                     Choose size and crust
                 </div>
-        </div>
 
             <div class="card-body">
                 <div class="card">
@@ -116,13 +135,14 @@
 
                 </div>
                 <div class="card-footer">
-                    <p class="text-right"><a href="#" class="btn btn-primary active" role="button" aria-pressed="true">Next Step ></a></p>
+                    <p class="text-right"><a href="#cheese" class="btn btn-primary" role="button" aria-pressed="true">Next Step ></a></p>
                 </div>
-
+            </div>
 
                 <br>
 
-
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="cheese" role="tabpanel" aria-labelledby="home-tab">
 <nav class="navbar navbar-expand-lg bg-light">
     <a class="navbar-brand" style="color: #b9b9b9" href="#">Pizza World</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -159,19 +179,18 @@
     </div>
 </div>
 <h2>Build your own pizza!</h2>
-<ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a class="nav-link"><span class="badge badge-secondary">1 </span> Size and crust</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active"><span class="badge badge-secondary">2 </span> Cheese and Sauce</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link"><span class="badge badge-secondary">3 </span> Toppings</a>
-    </li>
-</ul>
-
-            </div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#size" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-secondary rounded-pill">1 </span> Size and crust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="profile" aria-selected="false"><span class="badge badge-secondary rounded-pill">2 </span> Cheese and Sauce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="contact" aria-selected="false"><span class="badge badge-secondary rounded-pill">3 </span> Toppings</a>
+                </li>
+            </ul>
+</div>
                 <div class="card">
                     <div class="card-header" style="background-color: #007BFE ; color: white">
                         Choose Cheese and Sauce
@@ -222,15 +241,20 @@
                     <div>
                         <div class="card-footer text-right">
                             <div class="btn-group" role="button" aria-label="Basic example">
-                                <button type="button" class="btn btn-primary active">< Previous Step</button>
-                                <button type="button" class="btn btn-primary active">Next Step ></button>
+                                <button href="size" type="button" class="btn btn-primary active">< Previous Step</button>
+                                <button href="toppings" type="button" class="btn btn-primary active">Next Step ></button>
 <!--                            <p class="text-right"><a href="#" class="btn btn-primary active push-right " role="button" aria-pressed="true">< Previous Step</a>-->
 <!--                            <a href="#" class="btn btn-primary active push-right" role="button" aria-pressed="true">Next Step ></a></p>-->
                             </div>
                         </div>
                     </div>
+    </div>
              <br>
 
+
+
+<!--        <div class="tab-content" id="myTabContent">-->
+            <div class="tab-pane fade show active" id="toppings" role="tabpanel" aria-labelledby="home-tab">
 <nav class="navbar navbar-expand-lg bg-light">
     <a class="navbar-brand" style="color: #b9b9b9" href="#">Pizza World</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -267,17 +291,17 @@
     </div>
 </div>
 <h2>Build your own pizza!</h2>
-<ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a class="nav-link"><span class="badge badge-secondary">1 </span> Size and crust</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link"><span class="badge badge-secondary">2 </span> Cheese and Sauce</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active"><span class="badge badge-secondary">3 </span> Toppings</a>
-    </li>
-</ul>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home-tab" data-toggle="tab" href="#size" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-secondary rounded-pill">1 </span> Size and crust</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="profile" aria-selected="false"><span class="badge badge-secondary rounded-pill">2 </span> Cheese and Sauce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="contact-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="contact" aria-selected="false"><span class="badge badge-secondary rounded-pill">3 </span> Toppings</a>
+                    </li>
+                </ul>
 <div class="card">
     <div class="card-header" style="background-color: #007BFE ; color: white">
         Choose Toppings
@@ -358,7 +382,7 @@
                     <div class="card-footer">
                         <p class="text-right"><a href="#" class="btn btn-primary active" role="button" aria-pressed="true">Checkout <i class="fas fa-shopping-cart"></i></a></p></div>
                 </div>
-
-
+            </div>
+</div>
 </body>
 </html>
