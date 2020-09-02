@@ -99,9 +99,6 @@
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
 
-geocode("San Antonio", mapboxToken).then(function(results) {
-      // do something with results
- })
 
 
 

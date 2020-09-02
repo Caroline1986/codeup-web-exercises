@@ -11,9 +11,17 @@
 <body>
 
 <div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+</script>
 <!--must be added before access token script-->
-    <script src="js/keys.js"></script>
-    <script src="js/mapbox-geocoder-utils.js"></script>
-    <script src="js/mapbox-api-lec.js"></script>
+<script src="js/keys.js" ></script>
+<script src="js/mapbox-geocoder-utils.js" ></script>
 </body>
 </html>

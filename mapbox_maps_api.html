@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script src="js/keys.js" ></script>
+<script src="js/mapbox-geocoder-utils.js" ></script>
+<script src="js/mapbox_maps_api.js"></script>
+<script>
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-98.598812, 29.523657],
+        zoom: 10
+    });
+    var restaurants = [
+        {
+            name: "Mis Padres",
+            coordinates: [-98.5981, 29.4893],
+            info: "Full of Love"
+
+        },
+        {
+            name: "Los Barrios",
+            coordinates: [-98.508210, 29.485860],
+            info: "Full of Tacos"
+        },
+        {
+            name: "Pho Sure",
+            coordinates: [-98.598812, 29.523657],
+            info: "Full of Tofu"
+        }
+    ];
+
+
+    restaurants.forEach(function(restaurant) {
+        console.log('In the forEach: ', restaurant);
+        // the  geocode method from mapbox-geocoder-utils.js
+        geocode(restaurant.address, mapboxToken).then(function(result) {
+            var popup = new mapboxgl.Popup()
+                .setHTML(restaurant.popupHTML);
+            var marker = new mapboxgl.Marker()
+                .setLngLat(result)
+                .addTo(map)
+                .setPopup(popup);
+
+        });
+    });
+
+</script>
+</body>
+</html>
