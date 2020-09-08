@@ -5,13 +5,80 @@
     <title>Title</title>
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<nav class="codeup">Inspector #5 Documents</nav>
+<h1 id="title">Planet Express</h1>
+<div>
+    <p id="robot">Our crew of robots require no conversation.</p>
+    <button id="btn1">Place a Delivery</button>
+    <p id="noRobot">You have declared your intolerance for AI.</p>
+    <button id="btn2">Cancel a Delivery</button>
+</div>
+<div>
+    <h4 class="codeup">Our Products</h4>
+    <ul>
+        <li>Slurm</li>
+        <li>LuiBot</li>
+        <li>Niblonean Pod</li>
+        <li>Fing Longerer</li>
+    </ul>
+</div>
+<div>
+    <h3>Foward Time Machine</h3>
+</div>
 
+<!--<h1 id="codeup">Hello Codeup</h1>-->
+<!--<h1>Example Page</h1>-->
+<!--<div class="important">-->
+<!--    <h3>NOTICE</h3>-->
+<!--    <p>This is an important message!</p>-->
+<!--</div>-->
+<!--<div class="not-important">-->
+<!--    <h2>Lorem Ipsum</h2>-->
+<!--    <p>-->
+<!--        Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.-->
+<!--    </p>-->
+<!--</div>-->
+<!--<p class="important">This is also very important.</p>-->
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-$(document).ready(function() {
-alert( 'The DOM has finished loading!' );
-});
+    $('li').css('font-size', '20px');
+    $('h1, p, li').css('background-color', 'yellow');
+    $(document).ready(function () {
+            alert($("h1").html());
+        });
+
+    // $(document).ready(function () {
+    //     $("#btn1").click(function () {
+    //         alert("Text: " + $("#robot").text());
+    //     });
+    //     $("#btn2").click(function () {
+    //         alert("Text: " + $("#noRobot").text());
+    //     });
+    // });
+    //
+    // $("#title").css('color', 'red');
+    //
+    // $("ul").css('list-style', "none");
+    //
+    // $("li").css("background-color", "blue");
+    //
+    // $(".codeup").css("border", "1px dotted red");
+    // $(document).ready(function() {
+    // alert( 'The DOM has finished loading!' );
+    // });
+    //
+    // var contents = $('#codeup').html()
+    // alert(contents);
+    // $('*').css('border', '1px solid #F00');
+    //
+    // $('.important').css('background-color', 'yellow');
+    //
+    // $('p').css('font-size', '14px');
+    //
+    // $('.important, p').css('background-color', '#FF0');
 </script>
 </body>
 </html>
