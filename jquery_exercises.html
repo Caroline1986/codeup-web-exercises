@@ -6,29 +6,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-<nav class="codeup">Inspector #5 Documents</nav>
-<h1 id="title">Planet Express</h1>
-<div>
-    <p id="robot">Our crew of robots require no conversation.</p>
-    <button id="btn1">Place a Delivery</button>
-    <p id="noRobot">You have declared your intolerance for AI.</p>
-    <button id="btn2">Cancel a Delivery</button>
-</div>
-<div>
-    <h4 class="codeup">Our Products</h4>
-    <ul>
-        <li>Slurm</li>
-        <li>LuiBot</li>
-        <li>Niblonean Pod</li>
-        <li>Fing Longerer</li>
-    </ul>
-</div>
-<div id="time">
-    <h3>Forward Time Machine</h3>
-    <button id="btn3">Journey on the...</button>
+<nav class="codeup text-center mb-3">Inspector #5 Documents</nav>
 
+<div class="container text-center">
+    <div class="col-12">
+        <div>
+            <h1 id="title">Planet Express</h1>
+            <p id="robot">Our crew of robots require no conversation.</p>
+            <button id="btn1">Place a Delivery</button>
+            <p id="noRobot">You have declared your intolerance for AI.</p>
+            <button id="btn2">Cancel a Delivery</button>
+        </div>
+        <div>
+            <h4 class="codeup">Our Products</h4>
+            <ul style=" list-style:none; padding-left: 0" >
+                <li>Slurm</li>
+                <li>LuiBot</li>
+                <li>Niblonean Pod</li>
+                <li>Fing Longerer</li>
+            </ul>
+        </div>
+        <div>
+        <div class="mb-3" id="time">
+            <h3>Forward Time Machine</h3>
+            <button id="btn3">Journey on the...</button>
+        </div>
+        <button id="btn4">Welcome to the distant future.</button>
+    </div>
+    </div>
 </div>
-<button id="btn4">Welcome to the distant future.</button>
+
 <!--<h1 id="codeup">Hello Codeup</h1>-->
 <!--<h1>Example Page</h1>-->
 <!--<div class="important">-->
@@ -66,6 +73,8 @@
         $("#btn4").click(function () {
             ($("#time").show(4000));
         });
+    });
+        $(document).ready(function () {
         $("li").hover (
             function() {
                 $(this).css({'background-color': '#e9cdd2', color: '#D93657'});
@@ -80,7 +89,7 @@
             ($(this).css('font-size', '18px'));
         });
     });
-    //
+    // //
     // $("#title").css('color', 'red');
     //
     // $("ul").css('list-style', "none");
@@ -102,7 +111,7 @@
     //
     // $('.important, p').css('background-color', '#FF0');
 </script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
