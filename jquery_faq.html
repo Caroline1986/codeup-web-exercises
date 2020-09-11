@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Big Bend National Park</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <style>
         .invisible {
             visibility: hidden;
@@ -10,11 +12,26 @@
 
         .highlight {
             background-color: gold;
+            width: fit-content;
         }
+
+        .bold-text {
+            font-weight: bold;
+        }
+        /*img {*/
+        /*    display: flex;*/
+        /*    flex-direction: row;*/
+        /*    */
+        /*}*/
     </style>
 </head>
 <body>
 <script src="./js/jquery.js"></script>
+<div id="newsletter">
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span>x</span>
+</div>
+<h2>Register for our newsletter!</h2>
 <p>Big Bend National Park</p>
     <dl>
         <dt>Santa Elena Canyon</dt>
@@ -31,16 +48,45 @@
             <dd>The remainder of the trail climbs steeply in and out of juniper, oak, and pine forest.</dd>
             <dd>The trail abruptly levels out at the ridge with superb views of Pine Canyon and the Sierra del Carmen in Mexico.</dd>
     </dl>
-<button id="butt">Click To Show Hidden</button>
 <button id="highlighter">Click To Show Hidden</button>
+<div class="justify-content-center">
+<div class="d-flex col-6 m-3" style="width: auto">
+<div class="d-flex p-3"><img src = "img/puffin-baby.jpg"></div>
+<div class="d-flex p-3"><img src = "img/puffin-egg.jpg"></div>
+<div class="d-flex p-3"><img src="img/puffin%20adult.jpg"></div>
+</div>
+</div>
+<button id = "rotateImage">Rotate</button>
+<h1>TidBits</h1>
+<h3>Yellowstone</h3>
+    <ul>
+        <li>Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode Island and Delaware combined.</li>
+        <li>There are more than 10,000 hydrothermal features in Yellowstone. The four types of thermal features are geysers, hot springs, mud pots, and fumaroles.</li>
+        <li>Yellowstone Lake has 131.7 sq. miles of surface area and 141 miles of shoreline. It is the largest high elevation lake in North America.</li>
+        <li>285 species of birds can be found in Yellowstone (150 nesting).</li>
+    </ul>
+<h3>Grand Canyon</h3>
+    <ul>
+        <li>It has long been believed that the Colorado River began carving the Grand Canyon about 6 million years ago, but a 2012 study contained a real shocker, suggesting that the process may have begun as far back as 70 million years. </li>
+        <li>Sudden changes in elevation have an enormous impact on temperature and precipitation, so the weather you're experiencing could vary drastically depending on where you are in the Grand Canyon.</li>
+        <li>FISH ARE RELATIVELY UNCOMMON IN THE GRAND CANYON</li>
+        <li>THERE'S A TOWN IN THE GRAND CANYON</li>
+    </ul>
+<h3>Congaree National Park</h3>
+    <ul>
+        <li>Congaree has the largest old-growth bottomland hardwood forest in the U.S.</li>
+        <li>For a month in early summer, between the end of May and the start of June, thousands of fireflies simultaneously light up each night at exactly the same time for a magical natural show.</li>
+    </ul>
+<button id="butt">Click To Show Hidden</button>
+
 <script>
     'use strict';
     $(document).ready(() => {
         function getRandomColor() {
-            let letters = '0123456789ABCDEF'
+            let letters = '0123ABCabc'
             let color = '#';
             for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
+                color += letters[Math.floor(Math.random() * 10)];
             }
             return color;
         }
@@ -55,12 +101,52 @@
         });
 
             $('#butt').click(function () {
-                $('dl').each(function (index, element) {
-                    console.log(element);
-                    $(element).children('dd').first().css('background-color', (getRandomColor()));
+                $('ul').each(function (index, element) {
+                    $(element).children('li').last().css('background-color', (getRandomColor()));
                 });
             });
+        $('li').click(function(){
+            $(this).parent('ul').children('li').first().css('color', 'blue');
         });
+
+        $('h3').next().children().hide();
+
+
+        $('h3').click(function() {
+            $(this).next().children('li').toggleClass('bold-text').slideToggle();
+
+        });
+
+        $('span').click(function () {
+            $('#newsletter').hide(5000);
+        });
+
+        $('h2').hide();
+        $('h2').delay(8000).fadeIn(3000);
+
+        // $('h3').click(function() {
+        // $(this).next().children('li').css('font-weight', 'bold').slideToggle();
+        // });
+
+
+        // $('#rotateImage').click(function () {
+        //     $('img').each(function () {
+        //     var curSrc = $(this).attr('src');
+        //     if (curSrc === "../img/puffin-baby.jpg") {
+        //         $(this).attr('src', "img/puffin%20adult.jpg");
+        //     }else if (curSrc === "img/puffin-egg.jpg") {
+        //         return ('img' === "img/puffin-baby.jpg");
+        //             }else if ('img' === "img/puffin%20adult.jpg")
+        //                 return ('img' === '"img/puffin-baby.jpg"');
+        //
+        // });
+        // });
+
+
+
+    });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
