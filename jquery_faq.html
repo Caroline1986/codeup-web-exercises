@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Big Bend National Park</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+<script src="./js/jquery.js"></script>
+<p>Big Bend National Park</p>
+    <dl>
+        <dt>Santa Elena Canyon</dt>
+            <dd>Santa Elena has the tallest cliffs forming the canyon wall—up to 1,500 feet.</dd>
+            <dd>Two miles into the canyon, the largest rapid, the Rock Slide is classified as a Class IV rapid at certain water levels.</dd>
+            <dd>For many miles upstream the river is trapped beneath the high walls, eventually emerging into a wider valley at the small town of Lajitas.</dd>
+        <dt>Cattail Falls</dt>
+            <dd>Cattail Canyon is a major ravine on the west side of the Chisos Mountains in Big Bend National Park, starting in the high country over 6,000 feet and descending steeply to the desert plains below.</dd>
+            <dd>Only the lowest section of the canyon is easily visited, by the 1.5 mile Cattail Falls Trail, which crosses undulating hills and enters a dense patch of woodland enclosing a small stream that flows through a enchanting series of pools from the base of an 80 foot waterfall.</dd>
+            <dd>Partly to protect the fragile environment by limiting visitor numbers, the trail to the falls is not marked on the NPS map of the national park, and the trailhead is not signed from the highway.</dd>
+        <dt>Lost Mine Trail</dt>
+            <dd>This trail serves as an outstanding introduction the flora and fauna of the Chisos Mountains. </dd>
+            <dd>With limited time, hike to marker 10 (about 1 mile), where a saddle offers stunning views of Casa Grande and Juniper Canyon. </dd>
+            <dd>The remainder of the trail climbs steeply in and out of juniper, oak, and pine forest.</dd>
+            <dd>The trail abruptly levels out at the ridge with superb views of Pine Canyon and the Sierra del Carmen in Mexico.</dd>
+    </dl>
+<button id="butt">Click To Show Hidden</button>
+<button id="highlighter">Click To Show Hidden</button>
+<script>
+    'use strict';
+    $(document).ready(() => {
+        function getRandomColor() {
+            let letters = '0123456789ABCDEF'
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        $('dd').addClass('invisible');
+        $('#highlighter').click(function () {
+            $('dd').toggleClass('invisible');
+        });
+
+        $('dd').click(function(){
+            $(this).toggleClass('highlight');
+        });
+
+            $('#butt').click(function () {
+                $('dl').each(function (index, element) {
+                    console.log(element);
+                    $(element).children('dd').first().css('background-color', (getRandomColor()));
+                });
+            });
+        });
+</script>
+</body>
+</html>
