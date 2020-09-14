@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
-<body>
+<body class="container-fluid">
+<nav class="navbar navbar-dark bg-dark">
+    <h1 style="color: whitesmoke">My Tool Store</h1>
+    <button id="newTool">Refresh</button>
+</nav>
 
-<h1>My Tool Store</h1>
-
-<table id="products">
+<table id="products" class="col-12">
     <thead>
         <tr>
             <th>Title</th>
@@ -19,6 +23,8 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -26,12 +32,40 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
+    $.get("data/inventory.json", {
+        }).done(function (data){
+        console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                $('#insertProducts').append
+                ('<tr>' + '<td>' + data[i].title + '</td>' +
+                '<td>' + data[i].quantity + '</td>' +
+                '<td>' + data[i].price+ '</td>' +
+                '<td>' + data[i].categories+ '</td>' + '</tr>'
+                )}
+    });
+
+    $('#newTool').click(function () {
+        $('#insertProducts').empty();
+        $.post("data/inventory.json")
+            .done(function(data){
+                console.log(data);
+                for (var i = 0; i < data.length; i++){
+                    $('#insertProducts').append('<tr>' +
+                        '<td>' + data[i].title + '</td>' +
+                        '<td>' + data[i].quantity + '</td>' +
+                        '<td>' + data[i].price + '</td>' +
+                        '<td>' + data[i].categories + '</td>' +
+                        '</tr>)');
+                }
+            });
+});
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
