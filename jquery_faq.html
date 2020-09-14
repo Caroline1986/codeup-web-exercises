@@ -27,11 +27,16 @@
 </head>
 <body>
 <script src="./js/jquery.js"></script>
-<div id="newsletter">
+<div id="newsletter" class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <h1>Would you like to sign up for our newsletter?</h1>
     <span>x</span>
 </div>
-<h2>Register for our newsletter!</h2>
+
+<h2>
+Register for our newsletter!
+</h2>
+
 <p>Big Bend National Park</p>
     <dl>
         <dt>Santa Elena Canyon</dt>
@@ -53,7 +58,7 @@
 <div class="d-flex col-6 m-3" style="width: auto">
 <div class="d-flex p-3"><img src = "img/puffin-baby.jpg"></div>
 <div class="d-flex p-3"><img src = "img/puffin-egg.jpg"></div>
-<div class="d-flex p-3"><img src="img/puffin%20adult.jpg"></div>
+<div class="d-flex p-3"><img src = "img/puffin%20adult.jpg"></div>
 </div>
 </div>
 <button id = "rotateImage">Rotate</button>
@@ -129,18 +134,18 @@
         // });
 
 
-        // $('#rotateImage').click(function () {
-        //     $('img').each(function () {
-        //     var curSrc = $(this).attr('src');
-        //     if (curSrc === "../img/puffin-baby.jpg") {
-        //         $(this).attr('src', "img/puffin%20adult.jpg");
-        //     }else if (curSrc === "img/puffin-egg.jpg") {
-        //         return ('img' === "img/puffin-baby.jpg");
-        //             }else if ('img' === "img/puffin%20adult.jpg")
-        //                 return ('img' === '"img/puffin-baby.jpg"');
-        //
-        // });
-        // });
+        $('#rotateImage').click(function () {
+            $('img').each(function () {
+            var curSrc = $(this).attr('src');
+            if (curSrc === "../img/puffin-baby.jpg") {
+                $(this).attr('src', "img/puffin%20adult.jpg");
+            }else if (curSrc === "img/puffin-egg.jpg") {
+                $(this).attr('src', "img/puffin-baby.jpg");
+                    }else if (curSrc === "img/puffin%20adult.jpg") {
+                $(this).attr('src', "img/puffin-baby.jpg");
+            };
+        });
+        });
 
 
 

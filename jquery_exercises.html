@@ -8,18 +8,20 @@
 <body>
 <nav class="codeup text-center mb-3">Inspector #5 Documents</nav>
 
-<div class="container text-center">
+<div class="container text-center d-inline-block">
     <div class="col-12">
         <div>
-            <h1 id="title">Planet Express</h1>
+            <h1 id="title" class="d-inline-block">Planet Express</h1>
+            <div>
             <p id="robot">Our crew of robots require no conversation.</p>
             <button id="btn1">Place a Delivery</button>
             <p id="noRobot">You have declared your intolerance for AI.</p>
             <button id="btn2">Cancel a Delivery</button>
+            </div>
         </div>
         <div>
             <h4 class="codeup">Our Products</h4>
-            <ul style=" list-style:none; padding-left: 0" >
+            <ul class="d-inline-block" style=" list-style:none; padding-left: 0" >
                 <li>Slurm</li>
                 <li>LuiBot</li>
                 <li>Niblonean Pod</li>
@@ -77,10 +79,10 @@
         $(document).ready(function () {
         $("li").hover (
             function() {
-                $(this).css({'background-color': '#e9cdd2', color: '#D93657'});
+                $(this).css({'background-color': '#e9cdd2', color: '#D93657', 'font-size': '1.5em'});
             },
             function() {
-                $(this).css({'background-color': '#fff', color: '#030303'});
+                $(this).css({'background-color': '#fff', color: '#030303', 'font-size': '1em'});
         });
         $("h1").click(function () {
             ($(this).css('background-color', '#4E65DD'));
