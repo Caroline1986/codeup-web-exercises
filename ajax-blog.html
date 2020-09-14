@@ -2,11 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>AJAX Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
-<div idn="posts">
+<style>
+    body {
+        background-color: honeydew;
+   }
 
+    tbody {
+        border: 1em black;
+    }
+</style>
+<body class="container-lg">
+<table class="table" id="products">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col" style="font-size: 3em">Let's Talk About Me</th>
+        <th scope="col" class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="date" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Categories
+            </button>
+            <div class="dropdown-menu" aria-labelledby="date">
+                <a class="dropdown-item" href="#new">Newest Post</a>
+                <a class="dropdown-item" href="#old">Oldest Post</a>
+                <a class="dropdown-item" href="#all">All Posts</a>
+            </div>
+            </div></th>
+
+    </tr>
+    </thead>
+    <tbody id="posts"></tbody>
+</table>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="background-color: #0c5460">
+    New Entry
+</button>
+<!-- Scrollable modal -->
+<div class="modal fade" style="background-color: #0b2e13" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Entry</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Blog Title</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="This is a form of therapy.">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Category</label>
+                        <input class="form-control" id="exampleFormControlSelect1" placeholder="pizza">
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Date of Entry</label>
+                        <select class="form-control" id="exampleFormControlSelect2">
+                            <option>01/01/2020</option>
+                            <option>02/02/2020</option>
+                            <option>03/03/2020</option>
+                            <option>04/04/2020</option>
+                            <option>05/05/2020</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">My Blog Stuff</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+(function() {
+"use strict";
+
+
+$.get("data/blog.json", {
+    }).done(function (data){
+    console.log(data);
+        for (var i = 0; i < data.length; i++) {
+        $('#posts').append
+            ('<div class="card">' + '<h3 class="card-header" style="background-color: #0c5460; color: #c3e6cb">' + data[i].title + '</h3>' +
+                '<p class="card-body">' + data[i].content + '</p>' +
+                '<div class="d-block align-content-around" id="category" style="background-color: #c3e6cb">' + data[i].categories +'</div>' +
+                '<p class="card-footer mb-3 text-right" id="date">'
+                 + data[i].date + '</p>' + '</div>'
+            )}
+    });
+
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

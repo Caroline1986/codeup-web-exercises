@@ -6,11 +6,26 @@
 
 </head>
 <body class="container-fluid">
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Categories
+    </a>
     <h1 style="color: whitesmoke">My Tool Store</h1>
     <button id="newTool">Refresh</button>
-</nav>
 
+
+</nav>
+<div>
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
 <table id="products" class="col-12">
     <thead>
         <tr>
@@ -20,7 +35,10 @@
             <th>Categories</th>
         </tr>
     </thead>
+
+
     <tbody id="insertProducts"></tbody>
+
 </table>
 
 
@@ -42,6 +60,7 @@
                 '<td>' + data[i].price+ '</td>' +
                 '<td>' + data[i].categories+ '</td>' + '</tr>'
                 )}
+
     });
 
     $('#newTool').click(function () {
