@@ -50,8 +50,7 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
-    $.get("data/inventory.json", {
-        }).done(function (data){
+    $.get("data/inventory.json").done(function (data){
         console.log(data);
             for (var i = 0; i < data.length; i++) {
                 $('#insertProducts').append
@@ -67,15 +66,15 @@
         $('#insertProducts').empty();
         $.post("data/inventory.json")
             .done(function(data){
-                console.log(data);
-                for (var i = 0; i < data.length; i++){
-                    $('#insertProducts').append('<tr>' +
-                        '<td>' + data[i].title + '</td>' +
-                        '<td>' + data[i].quantity + '</td>' +
-                        '<td>' + data[i].price + '</td>' +
-                        '<td>' + data[i].categories + '</td>' +
-                        '</tr>)');
-                }
+                // console.log(data);
+                // for (var i = 0; i < data.length; i++){
+                //     $('#insertProducts').append('<tr>' +
+                //         '<td>' + data[i].title + '</td>' +
+                //         '<td>' + data[i].quantity + '</td>' +
+                //         '<td>' + data[i].price + '</td>' +
+                //         '<td>' + data[i].categories + '</td>' +
+                //         '</tr>)');
+                // }
             });
 });
     // TODO: Take the data from inventory.json and append it to the products table
