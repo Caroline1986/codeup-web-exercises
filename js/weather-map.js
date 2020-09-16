@@ -2,20 +2,23 @@
     'use strict';
     $(document).ready(() => {
 
-
+//        shows weather based on city search
+$("#get-weather-button").click(function (){
+    var city = $("#city-search-input").val();
 $.get("http://api.openweathermap.org/data/2.5/forecast", {
     APPID: OWM_key,
-    q:     "San Antonio, US",
+    q:     "San Antonio",
     units: "imperial",
    cnt: 6
+
 }).done(function(data) {
     console.log(data);
     var wf = "";
-    wf += "<h2>" + data.city.name + "</h2>"; // City (displays once)
+    wf += "<h2>" + data.city.name + "</h2>";// City (displays once)
+
     $.each(data.list, function(index, val) {
         wf += "<p>" // Opening paragraph tag
         wf += "<b>Date: " + new Date(val.dt*1000) + "</b>: "
-        wf += "<b>Day " + index + "</b>: " // Day
         wf += val.main.temp + "&degC" // Temperature
         wf += "<span> | " + val.weather[0].description + "</span>"; // Description
         wf += "<img src='https://openweathermap.org/img/w/" + val.weather[0].icon + ".png'>" // Icon
@@ -25,7 +28,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 
 
 });
-
+});
 
 
 
@@ -80,14 +83,15 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
             center: [-98.4936, 29.4241],
             zoom: 10
         };
-        var markerOptions = {
+        var marker = {
             color: "#0040ff",
             draggable: true
         };
         const map = new mapboxgl.Map(mapOptions);
-        const marker = new mapboxgl.Marker(markerOptions)
+        const markerSet = new mapboxgl.Marker(marker)
             .setLngLat([-98.4936, 29.4241])
             .addTo(map);
+
 
         geoCenter("San Antonio, Texas", mapboxToken).then(result => {
             map.setCenter(result);
@@ -116,7 +120,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         });
         //update info based on new marker location
         marker.on('dragend', (function() {
-            let lngLat = marker.getLngLat();
+            let lngLat = markerSet.getLngLat();
             let searchCoords = [lngLat['lat'], lngLat['lng']];
             getWeather(searchCoords);
             geoCenter([lngLat['lng'], lngLat['lat']], mapboxToken)

@@ -14,21 +14,22 @@
         width: 90%;
         height: 700px;
     }
+
     </style>
 </head>
 <body>
 <!--begin -->
 <div class="card">
     <div class="card-header">
-        Weather App
+        <h3 id="location">Weather App</h3>
+
     </div>
     <!--    search bar-->
+
     <div class="map-stuff card-body">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search A City" id="city-search-input" aria-label="Search City" aria-describedby="button-addon2">
-                <div class="input-group-append">
+        <div class="row form-group form-inline" id="rowDiv">
+            <input type="text" name="city" class="form-control" placeholder="City Name" id="city-search-input" aria-label="Search City" aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary" type="button" id="get-weather-button">Find</button>
-                </div>
         </div>
     </div>
 
