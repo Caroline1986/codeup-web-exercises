@@ -56,7 +56,6 @@
 
                         $('#showWeatherForecast').append(wf);
 
-                        //     wf += "<div>Date: " + new Date(val.dt * 1000) + "</
                     };
                 });
             })
@@ -181,9 +180,9 @@
                         var wf = "";
 
                         wf +=
-                            "<div class='card d-flex m-auto row weatherCard text-center'>\n" +
-                            "<div>\n" + date + " </div>\n" +
-                            "<div>\n" +
+                            "<div class='card weatherCard justify-content-center'>\n" +
+                            "<div class='card-body'>\n" +
+                            "<h5 class='card-header'>\n" + date + " </h5>\n" +
                             "<div>\n" + description + "</div>\n" +
                             "<img src='https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>\n" + // Icon
                             "<div>High: " + maxTemp + "°F / " + "Low: " +minTemp + "°F </div>\n" +

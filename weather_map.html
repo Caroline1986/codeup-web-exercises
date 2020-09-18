@@ -13,7 +13,7 @@
     <style>
     #map {
         /* the width and height may be set to any size */
-        width: 90%;
+        width: 89%;
         height: 700px;
     }
     body {
@@ -24,7 +24,7 @@
         background-color: grey;
         color: whitesmoke;
         display: flex;
-
+        margin: 1em;
 
     }
 
@@ -39,7 +39,7 @@
             <h4 id="location"></h4>
     </div>
     <!--    search bar-->
-
+</div>
     <div class="card-body text-center">
         <div class="row form-group form-inline" id="rowDiv">
             <input type="text" name="city" class="form-control" placeholder="City Name" id="city-search-input" aria-label="Search City" aria-describedby="button-addon2">
@@ -48,15 +48,19 @@
     </div>
 
     <!--    end search bar-->
-    <div>
-        <div class="card-group">
-        <div id="showWeatherForecast"></div>
+    <div class="container-fluid p-0 m-0" style="width: 93%">
+        <div class="row m-auto d-flex flex-column m-0">
+            <div>
+                <div>
+                <div class="d-flex justify-content-center" id="showWeatherForecast"></div>
+                </div>
+            </div>
         </div>
     </div>
 
 
     <!--    end-->
-</div>
+
 <div class="row d-flex justify-content-center">
     <div id="map" class=""></div>
 </div>
