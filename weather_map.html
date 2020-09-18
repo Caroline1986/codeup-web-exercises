@@ -16,19 +16,31 @@
         width: 90%;
         height: 700px;
     }
+    body {
+        background-color: #0c5460;
+    }
+
+    .weatherCard {
+        background-color: grey;
+        color: whitesmoke;
+        display: flex;
+
+
+    }
+
 
     </style>
 </head>
 <body>
 <!--begin -->
-<div class="card">
-    <div class="card-header">
-        <h3 id="location">Weather App</h3>
-
+<div class="card" style="background-color: black; color: whitesmoke">
+    <div class="card-header text-center">
+        <h3>Weather App</h3>
+            <h4 id="location"></h4>
     </div>
     <!--    search bar-->
 
-    <div class="map-stuff card-body">
+    <div class="card-body text-center">
         <div class="row form-group form-inline" id="rowDiv">
             <input type="text" name="city" class="form-control" placeholder="City Name" id="city-search-input" aria-label="Search City" aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary" type="button" id="get-weather-button">Find</button>
@@ -36,8 +48,11 @@
     </div>
 
     <!--    end search bar-->
-    <div class = "card-group" id="showWeatherForecast"></div>
-
+    <div>
+        <div class="card-group">
+        <div id="showWeatherForecast"></div>
+        </div>
+    </div>
 
 
     <!--    end-->
