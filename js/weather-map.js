@@ -33,7 +33,7 @@
 
                     $("#showWeatherForecast").empty();
                     for (var i = 0; i <= data.list.length; i += 8) {
-                        var date = data.list[i].dt_txt;
+                        var date = (new Date(data.list[i].dt_txt.substring(0,10))).toDateString().substring(0,10);
                         var maxTemp = Math.round(data.list[i].main.temp_max);
                         var minTemp = Math.round(data.list[i].main.temp_min);
                         var description = data.list[i].weather[0].description;
@@ -45,7 +45,7 @@
                         wf +=
                             "<div class='card weatherCard'>\n" +
                             "<div class='card-body'>\n" +
-                            "<h5 class='card-header'>\n" + date + " </h5>\n" +
+                            "<h5>\n" + date + " </h5>\n" +
                             "<div>\n" + description + "</div>\n" +
                             "<img src='https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>\n" + // Icon
                             "<div>High: " + maxTemp + "°F / " + "Low: " +minTemp + "°F </div>\n" +
