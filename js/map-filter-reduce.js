@@ -52,7 +52,7 @@ console.log(lang);
 // //3. Use .map to create an array of strings where each element is a user's email address
 
 const emailArr = users.map( user => user.email );
-console.log(emailArr;)
+console.log(emailArr)
 // let emailArr = users.map((address) => address.email).join(",");
 // console.log(emailArr)
 
